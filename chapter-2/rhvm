@@ -1,0 +1,33 @@
+#!/bin/bash
+# Installing Red Hat Virtualization Manager
+  In this exercise, you will perform a standard deployment of a Red Hat Virtualization Manager server.
+  Before you begin
+	1. reset your workstation and rhvm machine
+	2. Login to rhvm as root using redhat password.
+		#ssh root@rhvm.lab.example.com (ssh root@172.25.250.9 		
+	3. To install Red Hat Virtualization Manager (RHVM) on your rhvm.lab.example.com system,
+	   ensure the system is registered with yum repository
+		# yum repolist
+
+	4. Download the rhvm.repo file from http://materials.example.com/rhvm.repo and 
+	   place it in the /etc/yum.repos.d/ directory to enable those repositories.
+		# wget -P /etc/yum.repos.d/  http://materials.example.com/rhvm.repo
+
+	5. Use the command yum repolist enabled to list all enabled YUM repositories on the system.
+		# yum repolist enabled
+	
+	6. Update all existing packages.
+		# yum -y update
+	
+	7. Install the rhevm package and dependencies using the yum command.
+		# yum install rhevm -y
+
+	8. After installing the rhevm package, run the engine-setup command to configure Red Hat
+	   Virtualization Manager. The engine-setup command executes an interactive installer,
+	   taking you through a series of questions with default settings displayed in square brackets.
+	   Perform a standard installation by accepting the default settings and customizing only the
+	   admin password as redhat			
+
+	  	# engine-setup 
+	
+	
